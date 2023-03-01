@@ -20,9 +20,8 @@ const armibellsPost = new InstagramPost("@armibells","World of an enterprenur",
 
 
 
-  
-  
-  // Ques 3a  
+
+   // Ques 3a  
     function createPerson( firstName, lastName, age, sex, street, city ) {
     return {
       firstName: firstName,
@@ -78,11 +77,96 @@ const armibellsPost = new InstagramPost("@armibells","World of an enterprenur",
   */
   
   
+
+
+  // QUES 4
+
+//  Using Object.assign();
+const drinks = {
+  yogurt: "hollandia",
+  soft: "fanta",
+  juice: "fiveAlive",
+  water: "mrviju",
+};
+const typesOfjuice = Object.assign({}, drinkss);
+typesOfjuice.juice = "fiveAlive";
+console.log(drinks);
+/*
+{
+  yogurt: "hollandia",
+  soft: "fanta",
+  juice: "fiveAlive",
+  water: "mrviju",
+}
+*/
+console.log({ typesOfdrinks });
+/*
+{
+  typesOfjuice: {
+   yogurt: "hollandia",
+  soft: "fanta",
+  juice: "fiveAlive",
+  water: "mrviju",
+  }
+}
+*/
+  
+  
+  // Using JSON.parse
+
+const typesOfsoft = JSON.parse(JSON.stringify(drinks));
+typesOfsoft.soft = "fanta";
+console.log({ typesOffanta });
+/*
+{
+  typesOfsoft: {
+    
+ yogurt: "hollandia",
+    soft: "fanta",
+    juice: "fiveAlive",
+    water: "mrviju",
+  }
+}
+*/
+
+  
+  
+//  Using Spread Syntax
+
+const typesOfjuice = { ...drinks };
+typesOfjuice.juice = "fiveAlive";
+console.log({ typesOfjuice });
+/*
+{
+  typesOfjuice: {
+    yogurt: "hollandia",
+    soft: "fanta",
+    juice: "fiveAlive",
+    water: "mrviju",
+  }
+*/
   
   
   
-  
-  
-  
-  
-  
+// QUES 5
+
+const presidentialCandidate = {
+  AAC: "Omoyele Sowore",
+  ACCORD: "Christopher Imumolen",
+  APC: "Bola Ahmed Tinubu",
+  LP: "Peter Obi",
+  NNPP: "Rabiu Kwankwaso",
+  PDP: "Atiku Abubakar",
+};
+for (const property in presidentialCandidate) {
+  console.log(`${presidentialCandidate[property]} is the presidential candidate of ${property}`);
+}
+/*
+Omoyele Sowore is the presidential candidate of AAC
+Christopher Imumolen is the presidential candidate of ACCORD
+Bola Ahmed Tinubu is the presidential candidate of APC
+Peter Obi is the presidential candidate of LP
+Rabiu Kwankwaso is the presidential candidate of NNPP
+Atiku Abubakar is the presidential candidate of PDP
+*/
+
