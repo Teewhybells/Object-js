@@ -28,8 +28,8 @@ const armibellsPost = new InstagramPost("@armibells","World of an enterprenur",
       lastName: lastName,
       age: age,
       sex: sex,
-     street: lekki,
-     city:lagos
+    street: street,
+     city: city
     };
   }
   const person1 = createPerson("musa", "dawoda", 19, "male", "lekki", "lagos");
@@ -133,9 +133,9 @@ console.log({ typesOffanta });
   
 //  Using Spread Syntax
 
-const typesOfjuice = { ...drinks };
-typesOfjuice.juice = "fiveAlive";
-console.log({ typesOfjuice });
+//const typesOfjuice = { ...drinks };
+//typesOfjuice.juice = "fiveAlive";//
+//console.log({ typesOfjuice });
 /*
 {
   typesOfjuice: {
@@ -147,6 +147,7 @@ console.log({ typesOfjuice });
 */
   
   
+
   
 // QUES 5
 
